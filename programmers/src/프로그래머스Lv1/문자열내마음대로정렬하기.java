@@ -1,9 +1,7 @@
 package 프로그래머스Lv1;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
 
 public class 문자열내마음대로정렬하기 {
