@@ -19,7 +19,6 @@ public static void main(String[] args) {
 			}
 		}
 		answer = array[array.length-1];
-		
 	}
 	System.out.println(answer);
 }
