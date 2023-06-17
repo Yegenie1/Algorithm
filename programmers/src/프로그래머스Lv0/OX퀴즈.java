@@ -18,15 +18,14 @@ public class OX퀴즈 {
 			if (arr[i][1].equals("+")) {
 				if (left+right == ans) {
 					answer[i] = "O";
-					System.out.println(1);
 				}else {
-					answer[i] = "X";System.out.println(2);
+					answer[i] = "X";
 				}
 			}else if(arr[i][1].equals("-")){
 				if (left-right == ans) {
-					answer[i] = "O";System.out.println(3);
+					answer[i] = "O";
 				}else {
-					answer[i] = "X";System.out.println(4);
+					answer[i] = "X";
 				}
 			}
 			
