@@ -19,8 +19,6 @@ class Solution {
 		    }
 		}
 		
-		Collections.sort(list1);
-		Collections.sort(list2);
 		List<String> union = new ArrayList<String>();
 		List<String> intersection = new ArrayList<String>();
 		for (String s : list1) {
