@@ -7,8 +7,10 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
         String s = "666";
+        int i = 666;
         int count = 0;
-        for (int i = 666; i < 666666666; i++) {
+        
+        while(true) {
         	if (Integer.toString(i).contains(s)) {
 				count++;
 				if (count == n) {
@@ -16,7 +18,9 @@ public class Main {
 					break;
 				}
 			}
-		}
+        	i++;
+
+        }
         br.close();
     
     }
