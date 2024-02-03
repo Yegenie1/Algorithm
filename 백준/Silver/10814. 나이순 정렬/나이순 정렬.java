@@ -2,24 +2,57 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.StringTokenizer;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int n = Integer.parseInt(br.readLine());
-        String[][] arr = new String[n][2];
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		
+		int N = Integer.parseInt(br.readLine());
         
-        for (int i = 0; i < n; i++) {
-        	StringTokenizer st = new StringTokenizer(br.readLine());
-        	arr[i][0] = st.nextToken();
-        	arr[i][1] = st.nextToken();
+		Person[] p = new Person[N];
+		
+ 
+		for(int i = 0; i < N; i++) {
+			StringTokenizer st = new StringTokenizer(br.readLine(), " ");
+			int age = Integer.parseInt(st.nextToken());
+			String name = st.nextToken();
+			p[i] = new Person(age, name);
 		}
-        Arrays.sort(arr, (e1, e2)->{
-				return Integer.parseInt(e1[0]) - Integer.parseInt(e2[0]);
-        });
-        for (int i = 0; i < arr.length; i++) {
-			System.out.println(arr[i][0] + " " + arr[i][1]);
+ 
+		
+		Arrays.sort(p, new Comparator<Person>() {
+			@Override
+			public int compare(Person s1, Person s2) {
+				return s1.age - s2.age;
+			}
+			
+		});
+ 
+		StringBuilder sb = new StringBuilder();
+		
+		for(int i = 0; i < N; i++) {
+			sb.append(p[i]);
 		}
-    }
+        
+		System.out.println(sb);
+		
+	}
+    
+	public static class Person {
+		int age;
+		String name;
+        
+		public Person(int age, String name) {
+			this.age = age;
+			this.name = name;
+		}
+        
+		@Override
+		public String toString() {
+			return age + " " + name + "\n";
+		}
+	}
+ 
 }
