@@ -12,10 +12,10 @@ public class Main {
         int n = Integer.parseInt(br.readLine());
         StringBuilder sb = new StringBuilder();
         StringTokenizer st = new StringTokenizer(br.readLine());
-        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+        Map<String, Integer> map = new HashMap<String, Integer>();
         
         for (int i = 0; i < n; i++) {
-        	int num = Integer.parseInt(st.nextToken());
+        	String num = st.nextToken();
 			map.put(num, map.getOrDefault(num, 0)+1);
 		}
         
@@ -23,7 +23,7 @@ public class Main {
         st = new StringTokenizer(br.readLine());
         
         for (int i = 0; i < m; i++) {
-        	int num = Integer.parseInt(st.nextToken());
+        	String num = st.nextToken();
         	if (map.get(num) != null) {
         		sb.append(map.get(num)).append(" ");				
 			}else {
