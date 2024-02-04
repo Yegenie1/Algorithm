@@ -22,14 +22,32 @@ public class Main {
         st = new StringTokenizer(br.readLine());
         for (int i = 0; i < m; i++) {
 			int num = Integer.parseInt(st.nextToken());
-			if (Arrays.binarySearch(card, num) < 0) {
-				sb.append(0).append(" ");
-			}else {
-				sb.append(1).append(" ");
-			}
+			sb.append(binarySearch(card, n, num)).append(" ");
 		}
         
         System.out.println(sb);
         br.close();
+    }
+    
+    public static int binarySearch(int[] cards, int N, int search) {
+        int first = 0;
+        int last = N - 1;
+        int mid = 0;
+ 
+        while (first <= last) {
+            mid = (first + last) / 2;
+ 
+            if (cards[mid] == search) {
+                return 1;
+            }
+ 
+            if (cards[mid] < search) {
+                first = mid + 1;
+            } else {
+                last = mid - 1;
+            }
+        }
+ 
+        return 0;
     }
 }
