@@ -10,16 +10,14 @@ public class Main {
 		int n = Integer.parseInt(st.nextToken());
 		int k = Integer.parseInt(st.nextToken());
 		
-		System.out.println(factorial(n)/(factorial(n-k)*factorial(k)));
+		System.out.println(bino_coef(n, k));
 		
 		br.close();
 	}
-	public static int factorial(int a) {
-		int answer = 1;
-		for (int i = 1; i <= a; i++) {
-			answer *= i;
+	public static int bino_coef(int n, int k) {
+		if (k == 0 || n == k) {
+			return 1;
 		}
-		
-		return answer;
+		return bino_coef(n-1,k) + bino_coef(n-1,k-1);
 	}
 }
