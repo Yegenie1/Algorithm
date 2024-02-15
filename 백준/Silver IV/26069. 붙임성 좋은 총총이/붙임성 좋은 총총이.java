@@ -10,9 +10,8 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		Set<String> set = new HashSet<String>();
 		int n = Integer.parseInt(br.readLine());
-		int seq = 0;
 		set.add("ChongChong");
-		for (int i = 0; i < n - seq; i++) {
+		for (int i = 0; i < n; i++) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			String a = st.nextToken();
 			String b = st.nextToken();
