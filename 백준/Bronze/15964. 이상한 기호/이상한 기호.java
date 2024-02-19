@@ -7,12 +7,12 @@ public class Main {
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine());
-		int a = Integer.parseInt(st.nextToken());
-		int b = Integer.parseInt(st.nextToken());
+		long a = Long.parseLong(st.nextToken());
+		long b = Long.parseLong(st.nextToken());
 		System.out.println(func(a, b));
 		br.close();
 	}
-	public static int func(int a, int b){
+	public static long func(long a, long b){
 		return (a+b)*(a-b);
 	}
 }
