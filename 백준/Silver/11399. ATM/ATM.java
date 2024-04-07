@@ -20,5 +20,7 @@ public class Main {
 			sum+=arr[i];
 		}
 		System.out.println(sum);
+		
+		br.close();
 	}
 }
